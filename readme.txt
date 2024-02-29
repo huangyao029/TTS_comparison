@@ -28,9 +28,12 @@ Tacotron2+HifiGAN+16k
 训练HifgGan时，feature和音频的处理都需要与Tacotron2一致，在这个版本中，还有使用Tacotron2生成的数据对该HifiGan进行微调。
 暂且将该该模型定为:Tacotron2_v2.1 + HifiGAN_v1
 
-##到这里似乎可以做个简单的总结：
-目前还是推荐使用Tacotron2+HifiGAN的组合，WaveRNN效果相对差，并且不稳定，容易跑飞，而且目前看HifiGAN不需要使用Tacotron2生成的数据进行finetune也能有较好的效果。
+Tacotron2_HiFiGan_v1.1_16k.wav
+与Tacotron2_HiFiGan_16k.wav类似，不同的是，改HiFiGan模型是经过基于Tacotron2生成的数据进行微调后的模型。
+暂且将该该模型定为:Tacotron2_v2.1 + HifiGAN_v1.1
 
+##到这里似乎可以做个简单的总结：
+目前还是推荐使用Tacotron2+HifiGAN的组合，WaveRNN效果相对差，并且不稳定，容易跑飞，而且目前看HifiGAN不需要使用Tacotron2生成的数据进行finetune也能有较好的效果。另外，虽然单从这条音频看，HifiGan微调与否影响不大，但是从其他的整体结果看，FineTune后的HifiGan模型还是要比不Finetune的好一些。所以建议还是要Finetune。
 
 
 
